@@ -18,11 +18,11 @@ function post (){
         <div class="article">
           ${ item.text }
         </div>`;
-        contentsArea.insertAdjacentHTML("afterbegin", HTML);
-        articleText.value = "";
+      contentsArea.insertAdjacentHTML("afterbegin", HTML);
+      articleText.value = "";
   
-        const charNum  = document.getElementById("char_num");
-        charNum.innerHTML = "0文字";
+      const charNum  = document.getElementById("char_num");
+      charNum.innerHTML = "0文字";
     };
     e.preventDefault();
   });
