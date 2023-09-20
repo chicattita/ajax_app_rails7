@@ -1,17 +1,14 @@
-class ArticlesController < ApplicationController
+class PostsController < ApplicationController
   def index
-    @articles = Article.order("id DESC")
-    @article = Article.new
+    @posts = Post.order(id: "DESC")
   end
 
   def new
   end
 
   def create
-    article = Article.new(article_params)
-    if article.save
-      render json: {article: article} 
-    end
+    post = Post.create(content: params[:content])
+    render json:{ post: post }
   end
 
   private
